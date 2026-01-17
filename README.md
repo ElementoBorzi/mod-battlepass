@@ -40,7 +40,7 @@ A complete Battle Pass progression system for AzerothCore 3.3.5a with ALE.
 
 ### Client Addon
 
-Copy `BattlePassAddon/` folder to your WoW `Interface/AddOns/` directory or include it in a MPQ patch with the same hierarchy.
+Copy `BattlePass/` folder to your WoW `Interface/AddOns/` directory or include it in a MPQ patch with the same hierarchy.
 
 `/bp` or `/battlepass` ingame to toggle the frame.
 
@@ -129,8 +129,8 @@ mod-battlepass/
 │   └── battlepass_characters.sql # Characters DB table
 ├── lua_scripts/
 │   ├── lib/CSMH/
-│   │   ├── SMH.lua               # Server message handler
-│   │   └── smallfolk.lua         # Serialization library
+│   │   ├── CSMH_SMH.ext          # Server message handler
+│   │   └── CSMH_smallfolk.ext    # Serialization library
 │   └── battlepass/
 │       ├── 01_BP_Core.lua        # Core initialization
 │       ├── 02_BP_Database.lua    # Database operations
@@ -140,7 +140,7 @@ mod-battlepass/
 │       ├── 06_BP_Events.lua      # Game event hooks
 │       ├── 07_BP_Commands.lua    # Chat commands
 │       └── 08_BP_NPC.lua         # NPC gossip
-└── BattlePassAddon/
+└── BattlePass/
     ├── BattlePass.toc
     ├── BattlePass.xml
     ├── BattlePass.lua

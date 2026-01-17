@@ -1,6 +1,6 @@
 -- Load smallfolk if not already loaded
 if not Smallfolk then
-    require("lib.CSMH.smallfolk")
+    require("lib.CSMH.CSMH_smallfolk")
 end
 local smallfolk = Smallfolk
 
@@ -205,7 +205,7 @@ function SMH.OnDAT(sender, data)
 	end
 	
 	-- If no REQ header info has been cached, abort
-	if not datacache[sender:GetGUIDLow()][reqId] then
+	if not datacache[sender:GetGUIDLow()] or not datacache[sender:GetGUIDLow()][reqId] then
 		debugOut("DAT", "Rx", "Cache does not exist, aborting.")
 		return
 	end

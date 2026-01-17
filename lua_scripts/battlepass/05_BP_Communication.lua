@@ -7,7 +7,7 @@
 ]]
 
 -- Require CSMH Server Message Handler
-require("lib.CSMH.SMH")
+require("lib.CSMH.CSMH_SMH")
 
 -- Namespace
 BattlePass = BattlePass or {}
